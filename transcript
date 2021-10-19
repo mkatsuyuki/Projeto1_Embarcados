@@ -4,7 +4,6 @@
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Loading package ENV
 # -- Compiling entity read_bmp_tb
 # -- Compiling architecture sim of read_bmp_tb
 # -- Loading entity grayscale
@@ -19,4 +18,36 @@
 # -- Compiling entity grayscale
 # -- Compiling architecture rtl of grayscale
 # 
+# 
+# 2 compiles, 0 failed with no errors.
+# ***************************************************************
+# *                                                             *
+# * Thank you for downloading this example from VHDLwhiz.com    *
+# *                                                             *
+# * Type "runtb" in the ModelSim console to run the testbench   *
+# *                                                             *
+# * Like this:                                                  *
+# *                                                             *
+# * ModelSim> runtb                                             *
+# *                                                             *
+# ***************************************************************
+runtb
+# vsim -onfinish stop -msgmode both work.read_bmp_tb 
+# Start time: 00:18:42 on Oct 19,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.read_bmp_tb(sim)
+# Loading work.grayscale(rtl)
+# ** Note: image_width: 889, image_height: 624
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Note: Simulation done. Check "out.bmp" image.
+#    Time: 5547360 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Fatal: (vsim-3337) Attempt to read from an unopened file.
+#    Time: 5547360 ns  Iteration: 0  Process: /read_bmp_tb/line__47 File: D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd
+# Fatal error in ForLoop loop at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd line 62
+# 
+# HDL call sequence:
+# Stopped at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd 62 ForLoop loop
 # 

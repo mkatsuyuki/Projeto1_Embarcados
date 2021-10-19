@@ -1,1 +1,10 @@
+grayscale.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity grayscale
+-- Compiling architecture rtl of grayscale
 
+} {} {}}
