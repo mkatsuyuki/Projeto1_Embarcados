@@ -18,7 +18,7 @@ end grayscale;
 
 architecture rtl of grayscale is
 
-  signal luma : std_logic_vector(7 downto 0);
+  signal luma       : std_logic_vector(7 downto 0);
 
   signal r_weighted : unsigned(7 downto 0);
   signal g_weighted : unsigned(7 downto 0);
