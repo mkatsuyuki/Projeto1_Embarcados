@@ -51,3 +51,27 @@ runtb
 # HDL call sequence:
 # Stopped at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd 62 ForLoop loop
 # 
+runtb
+# End time: 00:20:41 on Oct 19,2021, Elapsed time: 0:01:59
+# Errors: 1, Warnings: 2
+# vsim -onfinish stop -msgmode both work.read_bmp_tb 
+# Start time: 00:20:41 on Oct 19,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.read_bmp_tb(sim)
+# Loading work.grayscale(rtl)
+# ** Note: image_width: 1000, image_height: 1000
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Note: Simulation done. Check "out.bmp" image.
+#    Time: 10 ms  Iteration: 0  Instance: /read_bmp_tb
+# ** Fatal: (vsim-3337) Attempt to read from an unopened file.
+#    Time: 10 ms  Iteration: 0  Process: /read_bmp_tb/line__47 File: D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd
+# Fatal error in ForLoop loop at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd line 62
+# 
+# HDL call sequence:
+# Stopped at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd 62 ForLoop loop
+# 
+# End time: 00:22:14 on Oct 19,2021, Elapsed time: 0:01:33
+# Errors: 1, Warnings: 1
