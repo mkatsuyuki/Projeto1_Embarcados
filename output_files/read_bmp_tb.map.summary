@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Oct 19 00:15:43 2021
+Analysis & Synthesis Status : Failed - Thu Oct 21 23:31:27 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : read_bmp_tb
 Top-level Entity Name : grayscale
 Family : Cyclone IV E
-Total logic elements : 16
-    Total combinational functions : 16
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 48
-Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total logic elements : N/A until Partition Merge
+    Total combinational functions : N/A until Partition Merge
+    Dedicated logic registers : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total memory bits : N/A until Partition Merge
+Embedded Multiplier 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge

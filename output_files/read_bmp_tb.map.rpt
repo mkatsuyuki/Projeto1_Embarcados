@@ -1,5 +1,5 @@
 Analysis & Synthesis report for read_bmp_tb
-Tue Oct 19 00:15:43 2021
+Thu Oct 21 23:31:27 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,13 +10,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -43,20 +37,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 19 00:15:43 2021       ;
+; Analysis & Synthesis Status        ; Failed - Thu Oct 21 23:31:27 2021           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; read_bmp_tb                                 ;
 ; Top-level Entity Name              ; grayscale                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 16                                          ;
-;     Total combinational functions  ; 16                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 48                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -163,132 +157,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; grayscale.vhd                    ; yes             ; User VHDL File  ; D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-
-
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 16     ;
-;                                             ;        ;
-; Total combinational functions               ; 16     ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 0      ;
-;     -- 3 input functions                    ; 10     ;
-;     -- <=2 input functions                  ; 6      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 2      ;
-;     -- arithmetic mode                      ; 14     ;
-;                                             ;        ;
-; Total registers                             ; 0      ;
-;     -- Dedicated logic registers            ; 0      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 48     ;
-;                                             ;        ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-;                                             ;        ;
-; Maximum fan-out node                        ; Add1~0 ;
-; Maximum fan-out                             ; 4      ;
-; Total fan-out                               ; 111    ;
-; Average fan-out                             ; 0.99   ;
-+---------------------------------------------+--------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |grayscale                 ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 48   ; 0            ; |grayscale          ; grayscale   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 48                          ;
-; cycloneiii_lcell_comb ; 16                          ;
-;     arith             ; 14                          ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 10                          ;
-;     normal            ; 2                           ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;                       ;                             ;
-; Max LUT depth         ; 2.70                        ;
-; Average LUT depth     ; 2.47                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 19 00:15:34 2021
+    Info: Processing started: Thu Oct 21 23:31:18 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off read_bmp_tb -c read_bmp_tb
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file filter.vhd
+    Info (12022): Found design unit 1: grayscale-rtl File: D:/Documentos/GitHub/Projeto1_Embarcados/filter.vhd Line: 35
+    Info (12023): Found entity 1: filter File: D:/Documentos/GitHub/Projeto1_Embarcados/filter.vhd Line: 15
+Critical Warning (12048): Ignored duplicate design unit "grayscale-rtl" in file filter.vhd File: D:/Documentos/GitHub/Projeto1_Embarcados/filter.vhd Line: 35
 Info (12021): Found 2 design units, including 1 entities, in source file grayscale.vhd
     Info (12022): Found design unit 1: grayscale-rtl File: D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd Line: 19
     Info (12023): Found entity 1: grayscale File: D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd Line: 5
-Info (12127): Elaborating entity "grayscale" for the top level hierarchy
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "r_in[0]" File: D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd Line: 8
-    Warning (15610): No output dependent on input pin "r_in[1]" File: D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd Line: 8
-    Warning (15610): No output dependent on input pin "g_in[0]" File: D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd Line: 9
-    Warning (15610): No output dependent on input pin "b_in[0]" File: D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd Line: 10
-    Warning (15610): No output dependent on input pin "b_in[1]" File: D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd Line: 10
-    Warning (15610): No output dependent on input pin "b_in[2]" File: D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd Line: 10
-    Warning (15610): No output dependent on input pin "b_in[3]" File: D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd Line: 10
-Info (21057): Implemented 64 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 24 input pins
-    Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 16 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Tue Oct 19 00:15:43 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+Error (10482): VHDL error at filter.vhd(45): object "r_out_filter" is used but not declared File: D:/Documentos/GitHub/Projeto1_Embarcados/filter.vhd Line: 45
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
+    Error: Peak virtual memory: 4765 megabytes
+    Error: Processing ended: Thu Oct 21 23:31:27 2021
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:20
 
 

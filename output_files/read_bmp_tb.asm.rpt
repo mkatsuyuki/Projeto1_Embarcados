@@ -1,5 +1,5 @@
 Assembler report for read_bmp_tb
-Tue Oct 19 00:08:46 2021
+Thu Oct 21 21:15:16 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Oct 19 00:08:46 2021 ;
+; Assembler Status      ; Successful - Thu Oct 21 21:15:16 2021 ;
 ; Revision Name         ; read_bmp_tb                           ;
 ; Top-level Entity Name ; grayscale                             ;
 ; Family                ; Cyclone IV E                          ;
@@ -78,15 +78,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 19 00:08:46 2021
+    Info: Processing started: Thu Oct 21 21:15:15 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off read_bmp_tb -c read_bmp_tb
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4676 megabytes
-    Info: Processing ended: Tue Oct 19 00:08:46 2021
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Thu Oct 21 21:15:16 2021
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

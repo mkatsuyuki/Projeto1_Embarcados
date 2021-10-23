@@ -31,6 +31,14 @@ architecture sim of read_bmp_tb is
   signal g_out : std_logic_vector(7 downto 0);
   signal b_out : std_logic_vector(7 downto 0);
 
+  -- FILTER signals
+  signal r_in_filter : std_logic_vector(7 downto 0);
+  signal g_in_filter : std_logic_vector(7 downto 0);
+  signal b_in_filter : std_logic_vector(7 downto 0);
+  signal r_out_filter : std_logic_vector(7 downto 0);
+  signal g_out_filter : std_logic_vector(7 downto 0);
+  signal b_out_filter : std_logic_vector(7 downto 0);
+
 begin --begin architecture
 
   DUT :entity work.grayscale(rtl)
@@ -41,6 +49,16 @@ begin --begin architecture
     r_out => r_out,
     g_out => g_out,
     b_out => b_out
+  );
+
+  FILTER :entity work.filter(rtl)
+  port map (
+    r_in_filter => r_in_filter,
+    g_in_filter => g_in_filter,
+    b_in_filter => b_in_filter,
+    r_out_filter => r_out_filter,
+    g_out_filter => g_out_filter,
+    b_out_filter => b_out_filter
   );
 
   process
@@ -163,9 +181,46 @@ begin --begin architecture
         row(col_i).red := r_out;
         row(col_i).green := g_out;
         row(col_i).blue := b_out;
-
       end loop;
     end loop;
+
+    -- Mask's Positions
+    --  1  2  3
+    --  4  5  6
+    --  7  8  9
+
+    -- FILTER Execution
+    -- for row_i in 1 to image_height - 2 loop
+
+    --   row_up := image(row_i-1);
+    --   row := image(row_i);
+    --   row_down := image(row_i+1);
+
+    --   for col_i in 1 to image_width - 2 loop
+
+    --     r_in_filter1 <= row_up(col_i-1).red;
+    --     r_in_filter2 <= row_up(col_i).red;
+    --     r_in_filter3 <= row_up(col_i+1).red;
+
+    --     r_in_filter4 <= row(col_i-1).red;
+    --     r_in_filter5 <= row(col_i).red;
+    --     r_in_filter6 <= row(col_i+1).red;
+ 
+    --     r_in_filter7 <= row_down(col_i-1).red;
+    --     r_in_filter8 <= row_down(col_i).red;
+    --     r_in_filter9 <= row_down(col_i+1).red;
+
+    --     wait for 10 ns;
+    --     wait for 10 ns;
+    --     wait for 10 ns;
+    --     wait for 10 ns;
+    --     wait for 10 ns;
+
+    --     row(col_i).red := r_out_filter;
+    --     row(col_i).green := g_out_filter;
+    --     row(col_i).blue := b_out_filter;
+    --   end loop;
+    -- end loop;
 
     -- Write header to output file
     for i in header_type'range loop
@@ -206,6 +261,6 @@ begin --begin architecture
     file_close(out_file);
 
     report "Simulation done. Check ""out.bmp"" image.";
-    finish;
+    --finish;
   end process;
 end architecture;

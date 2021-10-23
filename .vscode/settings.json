@@ -1,7 +1,13 @@
 {
     "files.exclude": {
+        "**/**.bak": true,
         "**/**.mpf": true,
         "**/**.mti": true,
+        "**/**.qpf": true,
+        "**/**.qsf": true,
+        "**/**.qws": true,
+        "**/**.rpt": true,
+        "**/**.txt": true,
         "**/**.wlf": true,
         "**/transcript": true
     }
