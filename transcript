@@ -45,7 +45,7 @@
 # ***************************************************************
 runtb
 # vsim -onfinish stop -msgmode both work.read_bmp_tb 
-# Start time: 01:14:47 on Oct 23,2021
+# Start time: 01:43:27 on Oct 23,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -56,9 +56,38 @@ runtb
 # Loading work.filter(rtl)
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Paulo  Hostname: DESKTOP-7OAA0P5  ProcessID: 13512
-#           Attempting to use alternate WLF file "./wlftj68asv".
+#           Attempting to use alternate WLF file "./wlfth7d98h".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftj68asv
+#           Using alternate file: ./wlfth7d98h
+# ** Note: image_width: 792, image_height: 1018
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Note: Simulation done. Check "out.bmp" image.
+#    Time: 8034462560 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Fatal: (vsim-3337) Attempt to read from an unopened file.
+#    Time: 8034462560 ns  Iteration: 0  Process: /read_bmp_tb/line__79 File: D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd
+# Fatal error in ForLoop loop at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd line 99
+# 
+# HDL call sequence:
+# Stopped at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd 99 ForLoop loop
+# 
+runtb
+# End time: 01:44:40 on Oct 23,2021, Elapsed time: 0:01:13
+# Errors: 1, Warnings: 5
+# vsim -onfinish stop -msgmode both work.read_bmp_tb 
+# Start time: 01:44:40 on Oct 23,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading work.read_bmp_tb(sim)
+# Loading work.grayscale(rtl)
+# Loading work.filter(rtl)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Paulo  Hostname: DESKTOP-7OAA0P5  ProcessID: 13512
+#           Attempting to use alternate WLF file "./wlftd9gmkt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftd9gmkt
 # ** Note: image_width: 630, image_height: 378
 #    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
 # ** Note: Simulation done. Check "out.bmp" image.
@@ -70,3 +99,5 @@ runtb
 # HDL call sequence:
 # Stopped at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd 99 ForLoop loop
 # 
+# End time: 01:52:45 on Oct 23,2021, Elapsed time: 0:08:05
+# Errors: 1, Warnings: 3

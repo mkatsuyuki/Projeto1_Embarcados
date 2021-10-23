@@ -65,18 +65,18 @@ begin
   -- r_aux8 <= unsigned(r_in_filter8)/9);
   -- r_aux9 <= unsigned(r_in_filter9)/9);
 
-  r_aux5 <= unsigned(r_in_filter5);
+  r_aux5 <= shift_right(shift_left(unsigned(r_in_filter5), 1), 3);
 
-  r_aux1 <= shift_right(unsigned(r_in_filter1), 2);
-  r_aux2 <= shift_right(unsigned(r_in_filter2), 2);
-  r_aux3 <= shift_right(unsigned(r_in_filter3), 2);
+  r_aux1 <= shift_right(shift_right(unsigned(r_in_filter1), 2), 3);
+  r_aux2 <= shift_right(shift_right(unsigned(r_in_filter2), 2), 3);
+  r_aux3 <= shift_right(shift_right(unsigned(r_in_filter3), 2), 3);
 
-  r_aux4 <= shift_right(unsigned(r_in_filter4), 2);
-  r_aux6 <= shift_right(unsigned(r_in_filter6), 2);
+  r_aux4 <= shift_right(shift_right(unsigned(r_in_filter4), 2), 3);
+  r_aux6 <= shift_right(shift_right(unsigned(r_in_filter6), 2), 3);
   
-  r_aux7 <= shift_right(unsigned(r_in_filter7), 2);
-  r_aux8 <= shift_right(unsigned(r_in_filter8), 2);
-  r_aux9 <= shift_right(unsigned(r_in_filter9), 2);
+  r_aux7 <= shift_right(shift_right(unsigned(r_in_filter7), 2), 3);
+  r_aux8 <= shift_right(shift_right(unsigned(r_in_filter8), 2), 3);
+  r_aux9 <= shift_right(shift_right(unsigned(r_in_filter9), 2), 3);
 
   final <= std_logic_vector(r_aux5 -
                             r_aux1 - 
