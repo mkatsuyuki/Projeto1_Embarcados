@@ -10,11 +10,11 @@ z2
 cModel Technology
 dD:/Desktop/Nova
 Efilter
-Z0 w1634870197
+Z0 w1634962462
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 56
+!i122 130
 Z4 dD:/Documentos/GitHub/Projeto1_Embarcados
 Z5 8D:/Documentos/GitHub/Projeto1_Embarcados/filter.vhd
 Z6 FD:/Documentos/GitHub/Projeto1_Embarcados/filter.vhd
@@ -24,9 +24,9 @@ VNASM@2W[TfHAR2mS`]Cf:0
 !s100 8So=hFg1:3L3:EzQ:Z>581
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1634870391
+Z8 !s110 1634962471
 !i10b 1
-Z9 !s108 1634870391.000000
+Z9 !s108 1634962471.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/GitHub/Projeto1_Embarcados/filter.vhd|
 Z11 !s107 D:/Documentos/GitHub/Projeto1_Embarcados/filter.vhd|
 !i113 1
@@ -37,11 +37,11 @@ R1
 R2
 R3
 Z14 DEx4 work 6 filter 0 22 NASM@2W[TfHAR2mS`]Cf:0
-!i122 56
-l43
-Z15 L35 21
-Z16 V=N3LH_0SLHk4^cT8h0kfY0
-Z17 !s100 CX@n=U[Bea@TG7Wl<lUCz2
+!i122 130
+l49
+Z15 L35 57
+V8:b3BDzmBVVO?fL>a8:O]2
+!s100 SHkg_B<FD[3hG8:?6A0g;2
 R7
 32
 R8
@@ -53,23 +53,23 @@ R11
 R12
 R13
 Egrayscale
-Z18 w1634866623
+Z16 w1634870816
 R1
 R2
 R3
-!i122 55
+!i122 129
 R4
-Z19 8D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd
-Z20 FD:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd
+Z17 8D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd
+Z18 FD:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd
 l0
 L5 1
 V]=e@Nkl^@7hM8kb2PbSH[1
 !s100 0^e^<F=H_lHf^KN?1HTnj0
 R7
 32
-R8
+Z19 !s110 1634962470
 !i10b 1
-R9
+Z20 !s108 1634962470.000000
 Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd|
 Z22 !s107 D:/Documentos/GitHub/Projeto1_Embarcados/grayscale.vhd|
 !i113 1
@@ -80,28 +80,28 @@ R1
 R2
 R3
 Z23 DEx4 work 9 grayscale 0 22 ]=e@Nkl^@7hM8kb2PbSH[1
-!i122 55
+!i122 129
 l27
 L19 24
 VPl9H?a@E:Z>8nHX6a[lET1
 !s100 ]ITUFZoWJPN_^;hS:@lSM1
 R7
 32
-R8
+R19
 !i10b 1
-R9
+R20
 R21
 R22
 !i113 1
 R12
 R13
 Eread_bmp_tb
-Z24 w1634870369
+Z24 w1634961580
 Z25 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
 R1
 R2
 R3
-!i122 54
+!i122 128
 R4
 Z26 8D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd
 Z27 FD:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd
@@ -111,9 +111,9 @@ V:V;FkFN`TZ7DMD42iDR]D1
 !s100 fNW`]QLBflbK>SOhDdN1V2
 R7
 33
-R8
+R19
 !i10b 1
-R9
+R20
 Z28 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd|
 Z29 !s107 D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd|
 !i113 1
@@ -127,16 +127,16 @@ R1
 R2
 R3
 DEx4 work 11 read_bmp_tb 0 22 :V;FkFN`TZ7DMD42iDR]D1
-!i122 54
+!i122 128
 l49
-L11 270
-V>G3]74VPRHgD?>_aRmR;43
-!s100 J>=?0Vh7JeLO5QzbCWoRC1
+L11 302
+V6GT?Z1EGL4fA<iMLH]8:k1
+!s100 B0J>HJPZ`gc6Y9:0zOEBD3
 R7
 33
-R8
+R19
 !i10b 1
-R9
+R20
 R28
 R29
 !i113 1

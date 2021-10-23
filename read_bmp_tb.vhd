@@ -83,7 +83,12 @@ begin --begin architecture
     variable image_width : integer;
     variable image_height : integer;
     variable row : row_pointer;
+    variable row_up : row_pointer;
+    variable row_middle : row_pointer;
+    variable row_down : row_pointer;
+    variable row_filtered : row_pointer;
     variable image : image_pointer;
+    variable image_filtered : image_pointer;
     variable padding : integer;
     variable char : character;
 
@@ -146,6 +151,7 @@ begin --begin architecture
 
     -- Create a new image type in dynamic memory
     image := new image_type(0 to image_height - 1);
+    image_filtered := new image_type(0 to image_height - 1);
 
     for row_i in 0 to image_height - 1 loop
 
@@ -180,6 +186,7 @@ begin --begin architecture
       image(row_i) := row;
 
     end loop;
+    
 
     -- DUT test
     for row_i in 0 to image_height - 1 loop
@@ -198,17 +205,46 @@ begin --begin architecture
       end loop;
     end loop;
 
+
+    --Recria uma nova imagem exatamente igual à imagem original(já em escala de cinza)
+    for row_i in 0 to image_height - 1 loop
+
+      -- Create a new row type in dynamic memory
+      row_filtered := new row_type(0 to image_width - 1);
+
+      for col_i in 0 to image_width - 1 loop
+
+        -- Read blue pixel
+        row_filtered(col_i).blue := row(col_i).blue;
+
+        -- Read green pixel
+        row_filtered(col_i).green := row(col_i).green;
+
+        -- Read red pixel
+        row_filtered(col_i).red := row(col_i).red;
+
+      end loop;
+
+      -- Assign the row pointer to the image vector of rows
+      image_filtered(row_i) := row_filtered;
+
+    end loop;
+    --
+
     -- Mask's Positions
     --  1  2  3
     --  4  5  6
     --  7  8  9
 
     -- FILTER Execution
+
     for row_i in 1 to image_height - 2 loop
 
       row_up := image(row_i-1);
-      row := image(row_i);
+      row_middle := image(row_i);
       row_down := image(row_i+1);
+
+      row_filtered := image_filtered(row_i);
 
       for col_i in 1 to image_width - 2 loop
 
@@ -216,19 +252,19 @@ begin --begin architecture
         r_in_filter2 <= row_up(col_i).red;
         r_in_filter3 <= row_up(col_i+1).red;
 
-        r_in_filter4 <= row(col_i-1).red;
-        r_in_filter5 <= row(col_i).red;
-        r_in_filter6 <= row(col_i+1).red;
+        r_in_filter4 <= row_middle(col_i-1).red;
+        r_in_filter5 <= row_middle(col_i).red;
+        r_in_filter6 <= row_middle(col_i+1).red;
  
         r_in_filter7 <= row_down(col_i-1).red;
         r_in_filter8 <= row_down(col_i).red;
         r_in_filter9 <= row_down(col_i+1).red;
 
-        wait for 100 ns;
+        wait for 10000 ns;
 
-        row(col_i).red := r_out_filter;
-        row(col_i).green := g_out_filter;
-        row(col_i).blue := b_out_filter;
+        row_filtered(col_i).red := r_out_filter;
+        row_filtered(col_i).green := g_out_filter;
+        row_filtered(col_i).blue := b_out_filter;
       end loop;
     end loop;
 
@@ -238,21 +274,21 @@ begin --begin architecture
     end loop;
 
     for row_i in 0 to image_height - 1 loop
-      row := image(row_i);
+      row_filtered := image_filtered(row_i);
 
       for col_i in 0 to image_width - 1 loop
 
         -- Write blue pixel
         write(out_file,
-          character'val(to_integer(unsigned(row(col_i).blue))));
+          character'val(to_integer(unsigned(row_filtered(col_i).blue))));
 
         -- Write green pixel
         write(out_file,
-          character'val(to_integer(unsigned(row(col_i).green))));
+          character'val(to_integer(unsigned(row_filtered(col_i).green))));
 
         -- Write red pixel
         write(out_file,
-          character'val(to_integer(unsigned(row(col_i).red))));
+          character'val(to_integer(unsigned(row_filtered(col_i).red))));
 
       end loop;
 

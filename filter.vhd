@@ -51,27 +51,41 @@ begin
   r_out_filter <= std_logic_vector(final);
   g_out_filter <= std_logic_vector(final);
   b_out_filter <= std_logic_vector(final);
-
-  r_aux1 <= unsigned(((-1)*r_in_filter1)/9);
-  r_aux2 <= unsigned(((-1)*r_in_filter1)/9);
-  r_aux3 <= unsigned(((-1)*r_in_filter1)/9);
-
-  r_aux4 <= unsigned(((-1)*r_in_filter1)/9);
-  r_aux5 <= unsigned((8*r_in_filter1)/9);
-  r_aux6 <= unsigned(((-1)*r_in_filter1)/9);
   
-  r_aux7 <= unsigned(((-1)*r_in_filter1)/9);
-  r_aux8 <= unsigned(((-1)*r_in_filter1)/9);
-  r_aux9 <= unsigned(((-1)*r_in_filter1)/9);
+  -- r_aux5 <= unsigned((8*r_in_filter5)/9);
 
-  final <= std_logic_vector(r_aux1 +
-                            r_aux2 + 
-                            r_aux3 + 
-                            r_aux4 + 
-                            r_aux5 + 
-                            r_aux6 + 
-                            r_aux7 + 
-                            r_aux8 + 
-                            r_aux9 +);
+  -- r_aux1 <= unsigned(r_in_filter1)/9);
+  -- r_aux2 <= unsigned(r_in_filter2)/9);
+  -- r_aux3 <= unsigned(r_in_filter3)/9);
+
+  -- r_aux4 <= unsigned(r_in_filter4)/9);
+  -- r_aux6 <= unsigned(r_in_filter6)/9);
+  
+  -- r_aux7 <= unsigned(r_in_filter7)/9);
+  -- r_aux8 <= unsigned(r_in_filter8)/9);
+  -- r_aux9 <= unsigned(r_in_filter9)/9);
+
+  r_aux5 <= unsigned(r_in_filter5);
+
+  r_aux1 <= shift_right(unsigned(r_in_filter1), 2);
+  r_aux2 <= shift_right(unsigned(r_in_filter2), 2);
+  r_aux3 <= shift_right(unsigned(r_in_filter3), 2);
+
+  r_aux4 <= shift_right(unsigned(r_in_filter4), 2);
+  r_aux6 <= shift_right(unsigned(r_in_filter6), 2);
+  
+  r_aux7 <= shift_right(unsigned(r_in_filter7), 2);
+  r_aux8 <= shift_right(unsigned(r_in_filter8), 2);
+  r_aux9 <= shift_right(unsigned(r_in_filter9), 2);
+
+  final <= std_logic_vector(r_aux5 -
+                            r_aux1 - 
+                            r_aux2 - 
+                            r_aux3 - 
+                            r_aux4 - 
+                            r_aux6 - 
+                            r_aux7 - 
+                            r_aux8 - 
+                            r_aux9 );
 
 end architecture;
