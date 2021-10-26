@@ -45,7 +45,7 @@
 # ***************************************************************
 runtb
 # vsim -onfinish stop -msgmode both work.read_bmp_tb 
-# Start time: 01:43:27 on Oct 23,2021
+# Start time: 20:44:30 on Oct 25,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -56,25 +56,37 @@ runtb
 # Loading work.filter(rtl)
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Paulo  Hostname: DESKTOP-7OAA0P5  ProcessID: 13512
-#           Attempting to use alternate WLF file "./wlfth7d98h".
+#           Attempting to use alternate WLF file "./wlftm0hdhi".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfth7d98h
+#           Using alternate file: ./wlftm0hdhi
 # ** Note: image_width: 792, image_height: 1018
 #    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
 # ** Note: Simulation done. Check "out.bmp" image.
-#    Time: 8034462560 ns  Iteration: 0  Instance: /read_bmp_tb
-# ** Fatal: (vsim-3337) Attempt to read from an unopened file.
-#    Time: 8034462560 ns  Iteration: 0  Process: /read_bmp_tb/line__79 File: D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd
-# Fatal error in ForLoop loop at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd line 99
-# 
-# HDL call sequence:
-# Stopped at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd 99 ForLoop loop
-# 
+#    Time: 16088960 ns  Iteration: 0  Instance: /read_bmp_tb
+# Break in Process line__80 at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd line 318
 runtb
-# End time: 01:44:40 on Oct 23,2021, Elapsed time: 0:01:13
-# Errors: 1, Warnings: 5
+# End time: 20:57:37 on Oct 25,2021, Elapsed time: 0:13:07
+# Errors: 0, Warnings: 13
 # vsim -onfinish stop -msgmode both work.read_bmp_tb 
-# Start time: 01:44:40 on Oct 23,2021
+# Start time: 20:57:37 on Oct 25,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -85,19 +97,158 @@ runtb
 # Loading work.filter(rtl)
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Paulo  Hostname: DESKTOP-7OAA0P5  ProcessID: 13512
-#           Attempting to use alternate WLF file "./wlftd9gmkt".
+#           Attempting to use alternate WLF file "./wlftfmm32w".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftd9gmkt
+#           Using alternate file: ./wlftfmm32w
+# ** Note: image_width: 100, image_height: 100
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Note: Simulation done. Check "out.bmp" image.
+#    Time: 196040 ns  Iteration: 0  Instance: /read_bmp_tb
+# Break in Process line__80 at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd line 318
+runtb
+# End time: 21:01:18 on Oct 25,2021, Elapsed time: 0:03:41
+# Errors: 0, Warnings: 12
+# vsim -onfinish stop -msgmode both work.read_bmp_tb 
+# Start time: 21:01:18 on Oct 25,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading work.read_bmp_tb(sim)
+# Loading work.grayscale(rtl)
+# Loading work.filter(rtl)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Paulo  Hostname: DESKTOP-7OAA0P5  ProcessID: 13512
+#           Attempting to use alternate WLF file "./wlft5z3tee".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5z3tee
+# ** Note: image_width: 792, image_height: 1018
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Note: Simulation done. Check "out.bmp" image.
+#    Time: 16088960 ns  Iteration: 0  Instance: /read_bmp_tb
+# Break in Process line__80 at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd line 318
+runtb
+# End time: 21:03:33 on Oct 25,2021, Elapsed time: 0:02:15
+# Errors: 0, Warnings: 12
+# vsim -onfinish stop -msgmode both work.read_bmp_tb 
+# Start time: 21:03:34 on Oct 25,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading work.read_bmp_tb(sim)
+# Loading work.grayscale(rtl)
+# Loading work.filter(rtl)
+# ** Warning: (vsim-7) Failed to open VHDL file "output/out.bmp" in r+b mode.
+# Invalid argument. (errno = EINVAL)
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Paulo  Hostname: DESKTOP-7OAA0P5  ProcessID: 13512
+#           Attempting to use alternate WLF file "./wlftz5e0dj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftz5e0dj
+# ** Note: image_width: 537, image_height: 612
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Note: Simulation done. Check "out.bmp" image.
+#    Time: 6549940 ns  Iteration: 0  Instance: /read_bmp_tb
+# Break in Process line__80 at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd line 318
+runtb
+# End time: 21:04:17 on Oct 25,2021, Elapsed time: 0:00:43
+# Errors: 0, Warnings: 13
+# vsim -onfinish stop -msgmode both work.read_bmp_tb 
+# Start time: 21:04:17 on Oct 25,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading work.read_bmp_tb(sim)
+# Loading work.grayscale(rtl)
+# Loading work.filter(rtl)
+# ** Warning: (vsim-7) Failed to open VHDL file "output/out.bmp" in r+b mode.
+# Invalid argument. (errno = EINVAL)
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Paulo  Hostname: DESKTOP-7OAA0P5  ProcessID: 13512
+#           Attempting to use alternate WLF file "./wlftgmkxwa".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftgmkxwa
 # ** Note: image_width: 630, image_height: 378
 #    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /read_bmp_tb/FILTER
 # ** Note: Simulation done. Check "out.bmp" image.
-#    Time: 2363661400 ns  Iteration: 0  Instance: /read_bmp_tb
-# ** Fatal: (vsim-3337) Attempt to read from an unopened file.
-#    Time: 2363661400 ns  Iteration: 0  Process: /read_bmp_tb/line__79 File: D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd
-# Fatal error in ForLoop loop at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd line 99
-# 
-# HDL call sequence:
-# Stopped at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd 99 ForLoop loop
-# 
-# End time: 01:52:45 on Oct 23,2021, Elapsed time: 0:08:05
-# Errors: 1, Warnings: 3
+#    Time: 4742680 ns  Iteration: 0  Instance: /read_bmp_tb
+# Break in Process line__80 at D:/Documentos/GitHub/Projeto1_Embarcados/read_bmp_tb.vhd line 318

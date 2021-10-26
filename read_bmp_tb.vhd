@@ -27,6 +27,7 @@ architecture sim of read_bmp_tb is
   signal r_in : std_logic_vector(7 downto 0);
   signal g_in : std_logic_vector(7 downto 0);
   signal b_in : std_logic_vector(7 downto 0);
+
   signal r_out : std_logic_vector(7 downto 0);
   signal g_out : std_logic_vector(7 downto 0);
   signal b_out : std_logic_vector(7 downto 0);
@@ -94,7 +95,7 @@ begin --begin architecture
 
    begin
 
-    -- Read entire header
+    -- Read entire headeri
     for i in header_type'range loop
       read(bmp_file, header(i));
     end loop;
@@ -102,7 +103,8 @@ begin --begin architecture
     -- Check ID field
     assert header(0) = 'B' and header(1) = 'M'
       report "First two bytes are not ""BM"". This is not a BMP file"
-      severity failure;
+      --severity failure;
+		severity note;
 
     -- Check that the pixel array offset is as expected
     assert character'pos(header(10)) = 54 and
@@ -110,7 +112,8 @@ begin --begin architecture
       character'pos(header(12)) = 0 and
       character'pos(header(13)) = 0
       report "Pixel array offset in header is not 54 bytes"
-      severity failure;
+      --severity failure;
+		severity note;
 
     -- Check that DIB header size is 40 bytes,
     -- meaning that the BMP is of type BITMAPINFOHEADER
@@ -119,17 +122,22 @@ begin --begin architecture
       character'pos(header(16)) = 0 and
       character'pos(header(17)) = 0
       report "DIB headers size is not 40 bytes, is this a Windows BMP?"
-      severity failure;
+      --severity failure;
+		severity note;
 
     -- Check that the number of color planes is 1
     assert character'pos(header(26)) = 1 and
       character'pos(header(27)) = 0
-      report "Color planes is not 1" severity failure;
+      report "Color planes is not 1" 
+		--severity failure;
+		severity note;
 
     -- Check that the number of bits per pixel is 24
     assert character'pos(header(28)) = 24 and
       character'pos(header(29)) = 0
-      report "Bits per pixel is not 24" severity failure;
+      report "Bits per pixel is not 24" 
+		--severity failure;
+		severity note;
 
     -- Read image width
     image_width := character'pos(header(18)) +
@@ -260,7 +268,7 @@ begin --begin architecture
         r_in_filter8 <= row_down(col_i).red;
         r_in_filter9 <= row_down(col_i+1).red;
 
-        wait for 10000 ns;
+        wait for 10 ns;
 
         row_filtered(col_i).red := r_out_filter;
         row_filtered(col_i).green := g_out_filter;
@@ -307,6 +315,6 @@ begin --begin architecture
     file_close(out_file);
 
     report "Simulation done. Check ""out.bmp"" image.";
-    --finish;
+    finish;
   end process;
 end architecture;

@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Oct 21 21:15:14 2021
+Fitter Status : Successful - Mon Oct 25 21:11:01 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : read_bmp_tb
-Top-level Entity Name : grayscale
+Top-level Entity Name : filter
 Family : Cyclone IV E
-Device : EP4CE6E22A7
+Device : EP4CE6U14I7
 Timing Models : Final
-Total logic elements : 16 / 6,272 ( < 1 % )
-    Total combinational functions : 16 / 6,272 ( < 1 % )
+Total logic elements : 648 / 6,272 ( 10 % )
+    Total combinational functions : 648 / 6,272 ( 10 % )
     Dedicated logic registers : 0 / 6,272 ( 0 % )
 Total registers : 0
-Total pins : 48 / 92 ( 52 % )
+Total pins : 96 / 180 ( 53 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )

@@ -18,7 +18,7 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script d:/intelfpga_lite/20.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File read_bmp_tb_run_msim_gate_vhdl.do already exists - backing up current file as read_bmp_tb_run_msim_gate_vhdl.do.bak1
+Warning: File read_bmp_tb_run_msim_gate_vhdl.do already exists - backing up current file as read_bmp_tb_run_msim_gate_vhdl.do.bak4
 Probing transcript
 ModelSim-Altera Info: # Reading pref.tcl
 ModelSim-Altera Info: # do read_bmp_tb_run_msim_gate_vhdl.do
@@ -34,7 +34,7 @@ ModelSim-Altera Info: # Modifying modelsim.ini
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # vcom -93 -work work {read_bmp_tb.vho}
 ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-ModelSim-Altera Info: # Start time: 21:15:32 on Oct 21,2021
+ModelSim-Altera Info: # Start time: 17:16:28 on Oct 24,2021
 ModelSim-Altera Info: # vcom -reportprogress 300 -93 -work work read_bmp_tb.vho 
 ModelSim-Altera Info: # -- Loading package STANDARD
 ModelSim-Altera Info: # -- Loading package TEXTIO
@@ -45,9 +45,9 @@ ModelSim-Altera Info: # -- Loading package cycloneive_atom_pack
 ModelSim-Altera Info: # -- Loading package cycloneive_components
 ModelSim-Altera Info: # -- Compiling entity hard_block
 ModelSim-Altera Info: # -- Compiling architecture structure of hard_block
-ModelSim-Altera Info: # -- Compiling entity grayscale
-ModelSim-Altera Info: # -- Compiling architecture structure of grayscale
-ModelSim-Altera Info: # End time: 21:15:32 on Oct 21,2021, Elapsed time: 0:00:00
+ModelSim-Altera Info: # -- Compiling entity filter
+ModelSim-Altera Info: # -- Compiling architecture structure of filter
+ModelSim-Altera Info: # End time: 17:16:28 on Oct 24,2021, Elapsed time: 0:00:00
 ModelSim-Altera Info: # Errors: 0, Warnings: 0
 ModelSim-Altera Info: # 
 Info: NativeLink simulation flow was successful

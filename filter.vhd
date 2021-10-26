@@ -2,10 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+
 -- High Pass Filter Mask
--- -1 -1 -1
--- -1  8 -1
--- -1 -1 -1
+--  -1  -1  -1
+--  -1   8  -1
+--  -1  -1  -1
 
 -- Mask's Positions
 --  1  2  3
@@ -47,36 +48,21 @@ architecture rtl of filter is
   signal r_aux9 : unsigned(7 downto 0);
 
 begin
-
+  --criar um process
+  --implementar registradores na entrada e saída
   r_out_filter <= std_logic_vector(final);
   g_out_filter <= std_logic_vector(final);
   b_out_filter <= std_logic_vector(final);
-  
-  -- r_aux5 <= unsigned((8*r_in_filter5)/9);
 
-  -- r_aux1 <= unsigned(r_in_filter1)/9);
-  -- r_aux2 <= unsigned(r_in_filter2)/9);
-  -- r_aux3 <= unsigned(r_in_filter3)/9);
-
-  -- r_aux4 <= unsigned(r_in_filter4)/9);
-  -- r_aux6 <= unsigned(r_in_filter6)/9);
-  
-  -- r_aux7 <= unsigned(r_in_filter7)/9);
-  -- r_aux8 <= unsigned(r_in_filter8)/9);
-  -- r_aux9 <= unsigned(r_in_filter9)/9);
-
-  r_aux5 <= shift_right(shift_left(unsigned(r_in_filter5), 1), 3);
-
-  r_aux1 <= shift_right(shift_right(unsigned(r_in_filter1), 2), 3);
-  r_aux2 <= shift_right(shift_right(unsigned(r_in_filter2), 2), 3);
-  r_aux3 <= shift_right(shift_right(unsigned(r_in_filter3), 2), 3);
-
-  r_aux4 <= shift_right(shift_right(unsigned(r_in_filter4), 2), 3);
-  r_aux6 <= shift_right(shift_right(unsigned(r_in_filter6), 2), 3);
-  
-  r_aux7 <= shift_right(shift_right(unsigned(r_in_filter7), 2), 3);
-  r_aux8 <= shift_right(shift_right(unsigned(r_in_filter8), 2), 3);
-  r_aux9 <= shift_right(shift_right(unsigned(r_in_filter9), 2), 3);
+  r_aux1 <= to_unsigned(((  TO_INTEGER(unsigned(r_in_filter1)))/9), r_aux1'length);
+  r_aux2 <= to_unsigned(((  TO_INTEGER(unsigned(r_in_filter2)))/9), r_aux2'length);
+  r_aux3 <= to_unsigned(((  TO_INTEGER(unsigned(r_in_filter3)))/9), r_aux3'length);
+  r_aux4 <= to_unsigned(((  TO_INTEGER(unsigned(r_in_filter4)))/9), r_aux4'length);
+  r_aux5 <= to_unsigned(((8*TO_INTEGER(unsigned(r_in_filter5)))/9), r_aux5'length);
+  r_aux6 <= to_unsigned(((  TO_INTEGER(unsigned(r_in_filter6)))/9), r_aux6'length);
+  r_aux7 <= to_unsigned(((  TO_INTEGER(unsigned(r_in_filter7)))/9), r_aux7'length);
+  r_aux8 <= to_unsigned(((  TO_INTEGER(unsigned(r_in_filter8)))/9), r_aux8'length);
+  r_aux9 <= to_unsigned(((  TO_INTEGER(unsigned(r_in_filter9)))/9), r_aux9'length);
 
   final <= std_logic_vector(r_aux5 -
                             r_aux1 - 
