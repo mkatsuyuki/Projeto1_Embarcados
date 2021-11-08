@@ -9,6 +9,9 @@ entity read_bmp_tb is
 end read_bmp_tb;
 
 architecture sim of read_bmp_tb is
+  constant ClockFrequency : integer := 1e6; -- 100 MHz
+  constant ClockPeriod    : time    := 1000 ms / ClockFrequency;
+  signal Clk    : std_logic := '1';
 
   type header_type  is array (0 to 53) of character;
 
@@ -33,16 +36,16 @@ architecture sim of read_bmp_tb is
   signal b_out : std_logic_vector(7 downto 0);
 
   -- FILTER signals
-  signal r_in_filter1 : std_logic_vector(7 downto 0);
-  signal r_in_filter2 : std_logic_vector(7 downto 0);
-  signal r_in_filter3 : std_logic_vector(7 downto 0);
-  signal r_in_filter4 : std_logic_vector(7 downto 0);
-  signal r_in_filter5 : std_logic_vector(7 downto 0);
-  signal r_in_filter6 : std_logic_vector(7 downto 0);
-  signal r_in_filter7 : std_logic_vector(7 downto 0);
-  signal r_in_filter8 : std_logic_vector(7 downto 0);
-  signal r_in_filter9 : std_logic_vector(7 downto 0);
-	
+  --signal r_in_filter1 : std_logic_vector(7 downto 0);
+    signal r_in_filter2 : std_logic_vector(7 downto 0);
+  --signal r_in_filter3 : std_logic_vector(7 downto 0);
+    signal r_in_filter4 : std_logic_vector(7 downto 0);
+    signal r_in_filter5 : std_logic_vector(7 downto 0);
+    signal r_in_filter6 : std_logic_vector(7 downto 0);
+  --signal r_in_filter7 : std_logic_vector(7 downto 0);
+    signal r_in_filter8 : std_logic_vector(7 downto 0);
+  --signal r_in_filter9 : std_logic_vector(7 downto 0);
+
   signal r_out_filter : std_logic_vector(7 downto 0);
   signal g_out_filter : std_logic_vector(7 downto 0);
   signal b_out_filter : std_logic_vector(7 downto 0);
@@ -61,20 +64,24 @@ begin --begin architecture
 
   FILTER :entity work.filter(rtl)
   port map (
-    r_in_filter1 => r_in_filter1,
+    Clk          => Clk,
+    --r_in_filter1 => r_in_filter1,
     r_in_filter2 => r_in_filter2,
-    r_in_filter3 => r_in_filter3,
+    --r_in_filter3 => r_in_filter3,
     r_in_filter4 => r_in_filter4,
     r_in_filter5 => r_in_filter5,
     r_in_filter6 => r_in_filter6,
-    r_in_filter7 => r_in_filter7,
+    --r_in_filter7 => r_in_filter7,
     r_in_filter8 => r_in_filter8,
-    r_in_filter9 => r_in_filter9,
+    --r_in_filter9 => r_in_filter9,
 
     r_out_filter => r_out_filter,
     g_out_filter => g_out_filter,
     b_out_filter => b_out_filter
   );
+
+  -- Process for generating the clock
+  Clk <= not Clk after ClockPeriod / 2;
 
   process
     type char_file is file of character;
@@ -256,19 +263,19 @@ begin --begin architecture
 
       for col_i in 1 to image_width - 2 loop
 
-        r_in_filter1 <= row_up(col_i-1).red;
+        --r_in_filter1 <= row_up(col_i-1).red;
         r_in_filter2 <= row_up(col_i).red;
-        r_in_filter3 <= row_up(col_i+1).red;
+        --r_in_filter3 <= row_up(col_i+1).red;
 
         r_in_filter4 <= row_middle(col_i-1).red;
         r_in_filter5 <= row_middle(col_i).red;
         r_in_filter6 <= row_middle(col_i+1).red;
  
-        r_in_filter7 <= row_down(col_i-1).red;
+        --r_in_filter7 <= row_down(col_i-1).red;
         r_in_filter8 <= row_down(col_i).red;
-        r_in_filter9 <= row_down(col_i+1).red;
+        --r_in_filter9 <= row_down(col_i+1).red;
 
-        wait for 10 ns;
+        wait for 1000 ns;
 
         row_filtered(col_i).red := r_out_filter;
         row_filtered(col_i).green := g_out_filter;

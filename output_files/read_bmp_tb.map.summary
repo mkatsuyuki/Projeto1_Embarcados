@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Oct 25 21:10:51 2021
+Analysis & Synthesis Status : Successful - Sun Nov 07 20:47:03 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : read_bmp_tb
 Top-level Entity Name : filter
 Family : Cyclone IV E
-Total logic elements : 648
-    Total combinational functions : 648
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 96
+Total logic elements : 407
+    Total combinational functions : 383
+    Dedicated logic registers : 59
+Total registers : 59
+Total pins : 65
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
